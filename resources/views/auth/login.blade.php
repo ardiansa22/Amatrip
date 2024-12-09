@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="/assets/images/logo.png">
-  <title>Lokatiket</title>
+  <title>AmaTrip</title>
   @laravelPWA
     <!-- Web Application Manifest -->
 <link rel="manifest" href="{{route('laravelpwa.manifest')}}">
@@ -124,7 +124,7 @@
             <div class="col-12 d-flex flex-column mx-auto">
               <div class="card login-card">
                 <div class="card-body">
-                  <img src="/assets/images/logolk.png" alt="Illustration">
+                  <!-- <img src="/assets/images/logolk.png" alt="Illustration"> -->
                   <h4 class="font-weight-bolder">Halo, Selamat datang !</h4>
                   <p class="text-muted text-center font-weight-bolder">Silahkan Masuk</p>
                   <form role="form" method="POST" action="{{ route('login') }}">
@@ -146,7 +146,7 @@
                       @enderror
                     </div>
                     <div class="text-center">
-                      <button type="submit" class="btn btn-primary" style="background-color:#0046BF;">Masuk</button>
+                      <button type="submit" class="btn btn-primary" style="background-color:#8BC34A;">Masuk</button>
                     </div>
                   </form>
                   <div class="additional-links">

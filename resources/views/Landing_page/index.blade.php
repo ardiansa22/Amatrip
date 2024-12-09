@@ -388,8 +388,6 @@
             </a>
             <div class="text p-4 d-block">
               <span class="tag">{{$blog->published_date}}</span>
-              <span class="tag">,</span>
-              <span class="tag">{{$blog->tags}}</span>
               <h3 class="heading mt-3">
                 <a href="{{route('showblog',$blog)}}">{{$blog->title}}</a>
               </h3>
