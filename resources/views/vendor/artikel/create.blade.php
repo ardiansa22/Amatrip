@@ -59,8 +59,9 @@
                         <label for="category" class="form-label">Category <span class="text-danger">*</span></label>
                         <select id="category" name="category" class="form-select" required>
                             <option value="" disabled selected>Select a category</option>
-                            <option value="technology">Technology</option>
-                            <option value="lifestyle">Lifestyle</option>
+                            <option value="Biotik">Biotik</option>
+                            <option value="Abiotik">Abiotik</option>
+                            <option value="Cultural">Cultural</option>
                         </select>
                     </div>
                 </div>

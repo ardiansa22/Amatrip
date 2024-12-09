@@ -7,6 +7,7 @@ use App\Models\Wisata;
 use App\Models\User;
 use App\Models\Blog;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class LandingPageController extends Controller
 {
@@ -18,9 +19,31 @@ class LandingPageController extends Controller
     public function index()
     {
         $wisatas = Wisata::all();
-        $blogs = Blog::all();
+        $blogs = Blog::latest('created_at') // Urutkan berdasarkan created_at secara desc
+            ->take(6) // Ambil 6 item
+            ->get();
+         // Ambil semua tags dari tabel blogs
+         $allTags = DB::table('blogs')
+         ->whereNotNull('tags') // Pastikan tags tidak null
+         ->pluck('tags')
+         ->toArray();
 
-        return view('Landing_page.index', compact('blogs','wisatas'));
+     // Gabungkan semua tags menjadi satu array
+     $tagsArray = [];
+     foreach ($allTags as $tags) {
+         $tagsArray = array_merge($tagsArray, explode(',', $tags));
+     }
+
+     // Hitung frekuensi setiap tag
+     $tagCounts = array_count_values($tagsArray);
+
+     // Urutkan berdasarkan frekuensi kemunculan (desc)
+     arsort($tagCounts);
+
+     // Ambil 5 tag teratas
+     $topTags = array_slice($tagCounts, 0, 5, true);
+
+        return view('Landing_page.index', compact('blogs','wisatas','topTags'));
     }
     public function tour()
     {
@@ -47,12 +70,54 @@ class LandingPageController extends Controller
     {
         // Ambil blog lain dengan kategori yang sama, kecuali blog yang sedang ditampilkan
         $blogs = Blog::where('category', $blog->category)  // Ganti 'category' dengan nama kolom kategori Anda
-        ->where('id', '!=', $blog->id)  // Pastikan blog yang sedang ditampilkan tidak muncul dalam daftar
-        ->get();
+            ->where('id', '!=', $blog->id)  // Pastikan blog yang sedang ditampilkan tidak muncul dalam daftar
+            ->get();
 
-        return view('Landing_page.showblog', compact('blog', 'blogs'));
+        // Mengakses data wisata terkait dengan blog
+        $wisata = $blog->wisata;  // Relasi yang sudah ditentukan pada model Blog
+
+        return view('Landing_page.showblog', compact('blog', 'blogs', 'wisata'));
     }
 
+    public function topTags()
+    {
+        // Ambil semua tags dari tabel blogs
+        $allTags = DB::table('blogs')
+            ->whereNotNull('tags') // Pastikan tags tidak null
+            ->pluck('tags')
+            ->toArray();
+
+        // Gabungkan semua tags menjadi satu array
+        $tagsArray = [];
+        foreach ($allTags as $tags) {
+            $tagsArray = array_merge($tagsArray, explode(',', $tags));
+        }
+
+        // Hitung frekuensi setiap tag
+        $tagCounts = array_count_values($tagsArray);
+
+        // Urutkan berdasarkan frekuensi kemunculan (desc)
+        arsort($tagCounts);
+
+        // Ambil 5 tag teratas
+        $topTags = array_slice($tagCounts, 0, 5, true);
+
+        // Kirim data ke view
+        return view('Landing_page.index', compact('topTags'));
+    }
+
+    public function showByCategory($category)
+    {
+        // Ambil artikel berdasarkan kategori
+        $artikels = Blog::where('category', $category)->get();
+
+        // Pastikan kategori valid
+        if (!in_array($category, ['Biotik', 'Abiotik', 'Cultural'])) {
+            return redirect()->back()->with('error', 'Kategori tidak valid.');
+        }
+
+        return view('Landing_page.blogCategory', compact('artikels', 'category'));
+    }
     /**
      * Show the form for creating a new resource.
      *

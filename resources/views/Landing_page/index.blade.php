@@ -48,23 +48,31 @@
             <p class="browse d-md-flex">
               <span
                 class="d-flex justify-content-md-center align-items-md-center"
-                ><a href="#">Biotic</a></span
+                ><a href="{{route('kategori','Biotik')}}">Biotic</a></span
               >
               <span
                 class="d-flex justify-content-md-center align-items-md-center"
-                ><a href="#top-tour-packages">
+                ><a href="{{route('kategori','Abiotik')}}">
                  Abiotic</a
                 ></span
               >
               <span
                 class="d-flex justify-content-md-center align-items-md- center"
-                ><a href="#"
+                ><a href="{{route('kategori','Cultural')}}"
                   >Cultural</a
                 ></span
               >
             </p>
             </div>
-
+            <div class="tag-widget post-tag-container mb-5 mt-5">
+                        <div class="tagcloud">
+                        <p>Most frequently appearing tags in articles</p>
+                        @foreach($topTags as $tag => $count)
+                            <a href="#" class="tag-cloud-link" style="color: white;">{{ $tag }}</a>
+                            @endforeach
+                        </div>
+                    </div>
+            
           </div>
         </div>
       </div>
@@ -551,164 +559,6 @@
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ftco-section">
-      <div class="container">
-        <div class="row justify-content-start mb-5 pb-3">
-          <div class="col-md-7 heading-section ftco-animate">
-            <span class="subheading">Special Offers</span>
-            <h2 class="mb-4"><strong>Popular</strong> Local Foods</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="destination">
-              <a
-                href="#"
-                class="img img-2 d-flex justify-content-center align-items-center"
-                style="background-image: url(images/jagungtiti.jpg)"
-              >
-                <div
-                  class="icon d-flex justify-content-center align-items-center"
-                >
-                  <span class="icon-search2"></span>
-                </div>
-              </a>
-              <div class="text p-3">
-                <h3><a href="#">Jagung Titi</a></h3>
-                <p class="rate">
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star-o"></i>
-                  <span>8 Rating</span>
-                </p>
-                <p>
-                  Makanan khas dari Flores yang terbuat dari jagung yang
-                  dipipihkan dan dibakar, sering disajikan dengan kelapa parut
-                </p>
-                <hr />
-                <p class="bottom-area d-flex">
-                  <span
-                    ><i class="icon-map-o"></i> Flores, Nusa Tenggara
-                    Timur</span
-                  >
-                  <span class="ml-auto"><a href="#">Discover</a></span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="destination">
-              <a
-                href="#"
-                class="img img-2 d-flex justify-content-center align-items-center"
-                style="background-image: url(images/papeda.jpg)"
-              >
-                <div
-                  class="icon d-flex justify-content-center align-items-center"
-                >
-                  <span class="icon-search2"></span>
-                </div>
-              </a>
-              <div class="text p-3">
-                <h3><a href="#">Papeda</a></h3>
-                <p class="rate">
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star-o"></i>
-                  <span>8 Rating</span>
-                </p>
-                <p>
-                  Bubur sagu khas Papua yang biasanya dimakan dengan ikan kuah
-                  kunir
-                </p>
-                <hr />
-                <p class="bottom-area d-flex">
-                  <span><i class="icon-map-o"></i> Papua</span>
-                  <span class="ml-auto"><a href="#">Discover</a></span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="destination">
-              <a
-                href="#"
-                class="img img-2 d-flex justify-content-center align-items-center"
-                style="background-image: url(images/satelilit.jpg)"
-              >
-                <div
-                  class="icon d-flex justify-content-center align-items-center"
-                >
-                  <span class="icon-search2"></span>
-                </div>
-              </a>
-              <div class="text p-3">
-                <h3><a href="#">Sate Lilit Ayam</a></h3>
-                <p class="rate">
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star-o"></i>
-                  <span>8 Rating</span>
-                </p>
-                <p>
-                  Makanan khas Bali yang terbuat dari daging cincang yang
-                  dicampur parutan kelapa, santan, jeruk nipis, bawang merah,
-                  dan merica, lalu direkatkan ke tusuk bambu atau sereh
-                </p>
-                <hr />
-                <p class="bottom-area d-flex">
-                  <span><i class="icon-map-o"></i> Klungkung, Bali</span>
-                  <span class="ml-auto"><a href="#">Discover</a></span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="destination">
-              <a
-                href="#"
-                class="img img-2 d-flex justify-content-center align-items-center"
-                style="background-image: url(images/saksang.jpg)"
-              >
-                <div
-                  class="icon d-flex justify-content-center align-items-center"
-                >
-                  <span class="icon-search2"></span>
-                </div>
-              </a>
-              <div class="text p-3">
-                <h3><a href="#">Saksang Babi</a></h3>
-                <p class="rate">
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star"></i>
-                  <i class="icon-star-o"></i>
-                  <span>8 Rating</span>
-                </p>
-                <p>
-                  Hidangan khas Batak yang terbuat dari daging babi atau ayam
-                  yang dimasak dengan rempah-rempah dan darah untuk memberi
-                  warna merah gelap
-                </p>
-                <hr />
-                <p class="bottom-area d-flex">
-                  <span><i class="icon-map-o"></i> Sumatera Utara</span>
-                  <span class="ml-auto"><a href="#">Discover</a></span>
-                </p>
               </div>
             </div>
           </div>

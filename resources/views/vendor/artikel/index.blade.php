@@ -30,6 +30,7 @@
                         <th scope="col">Author</th>
                         <th scope="col">Status</th>
                         <th scope="col">Publish Date</th>
+                        <!-- <th scope="col">Wisata</th> -->
 
                       </tr>
                     </thead>
@@ -48,6 +49,7 @@
                         <td>{{ $post->slug }}</td>
                         <td>{{ $post->category }}</td>
                         <td>{{ $post->published_date }}</td>
+                        <!-- <td>{{ $post->wisata->name }}</td> -->
 
                     </tr>
                     @endforeach

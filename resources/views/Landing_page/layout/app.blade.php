@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AmaTrip - EcoTourism Platorm</title>
+    <title>AmaTrip - Edu Platorm</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -57,7 +57,7 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a href="{{route('lp')}}" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
@@ -69,12 +69,14 @@
             <li class="nav-item">
               <a href="{{route('blog')}}" class="nav-link">Blog</a>
             </li>
-            <li class="nav-item">
-              <a href="contact.html" class="nav-link">Contact</a>
-            </li>
             <li class="nav-item cta">
-              <a href="contact.html" class="nav-link"
-                ><span>Add listing</span></a
+              <a href="{{route('login')}}" class="nav-link"
+                ><span>Login</span></a
+              >
+            </li>
+            <li class="nav-item cta" style="margin-left: 5px;">
+              <a href="#" class="nav-link"
+                ><span>Join as a partner</span></a
               >
             </li>
           </ul>

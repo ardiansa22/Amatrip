@@ -22,7 +22,7 @@ class Blog extends Model
         'image',
     ];
 
-    public function wisatas()
+    public function wisata()
     {
         return $this->belongsTo(Wisata::class,'wisata_id');
     }

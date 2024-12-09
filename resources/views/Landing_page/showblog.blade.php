@@ -61,16 +61,17 @@
                 <div class="col-md-8 ftco-animate mx-auto">
                     <h2 class="mb-3 text-center">{{$blog->title}}</h2>
                     {!! $blog->content !!}
-
-                    <div class="tag-widget post-tag-container mb-5 mt-5">
-                        <div class="tagcloud">
-                            <a href="#" class="tag-cloud-link">Rempah</a>
-                            <a href="#" class="tag-cloud-link">Ikan</a>
-                            <a href="#" class="tag-cloud-link">Laut</a>
-                            <a href="#" class="tag-cloud-link">Pantai</a>
-                        </div>
-                    </div>
+                                <!-- Link menuju halaman detail wisata terkait -->
+                    @if ($blog->wisata)
+                        <a href="{{ route('customer.show', $blog->wisata->id) }}">
+                            Lihat Wisata Terkait: {{ $blog->wisata->name }}
+                        </a>
+                    @else
+                        <p>Wisata terkait tidak tersedia.</p>
+        @endif
+    </div>
                 </div>
+                
             </div>
         </div>
     </section>

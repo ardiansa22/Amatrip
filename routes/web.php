@@ -35,6 +35,7 @@ Route::get('/tour', [LandingPageController::class, 'tour'])->name('tour');
 Route::get('/about', [LandingPageController::class, 'about'])->name('about');
 Route::get('/blog', [LandingPageController::class, 'blog'])->name('blog');
 Route::get('/blog/{blog}', [LandingPageController::class, 'showblog'])->name('showblog');
+Route::get('/Category/{category}', [LandingPageController::class, 'showByCategory'])->name('kategori');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 

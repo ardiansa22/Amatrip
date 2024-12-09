@@ -17,7 +17,7 @@
     <section class="ftco-section ftco-degree-bg">
       <div class="container">
         <div class="row">
-        	<div class="col-lg-3 sidebar ftco-animate">
+        	<!-- <div class="col-lg-3 sidebar ftco-animate">
         		<div class="sidebar-wrap bg-light ftco-animate">
         			<h3 class="heading mb-4">Find City</h3>
         			<form action="#">
@@ -64,224 +64,47 @@
 		            </div>
 	            </form>
         		</div>
-        		<div class="sidebar-wrap bg-light ftco-animate">
-        			<h3 class="heading mb-4">Star Rating</h3>
-        			<form method="post" class="star-rating">
-							  <div class="form-check">
-									<input type="checkbox" class="form-check-input" id="exampleCheck1">
-									<label class="form-check-label" for="exampleCheck1">
-										<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span></p>
-									</label>
-							  </div>
-							  <div class="form-check">
-						      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-						      <label class="form-check-label" for="exampleCheck1">
-						    	   <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i></span></p>
-						      </label>
-							  </div>
-							  <div class="form-check">
-						      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-						      <label class="form-check-label" for="exampleCheck1">
-						      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
-						     </label>
-							  </div>
-							  <div class="form-check">
-							    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-						      <label class="form-check-label" for="exampleCheck1">
-						      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
-						      </label>
-							  </div>
-							  <div class="form-check">
-						      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-						      <label class="form-check-label" for="exampleCheck1">
-						      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
-							    </label>
-							  </div>
-							</form>
-        		</div>
-          </div>
-          <div class="col-lg-9">
+          </div> -->
+          <div class="col-lg-12">
           	<div class="row">
-          		<div class="col-md-4 ftco-animate">
-		    				<div class="destination">
-		    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/waerebo3.jpeg);">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-    							<span class="icon-search2"></span>
-    						</div>
-		    					</a>
-		    					<div class="text p-3">
-		    						<div class="d-flex">
-		    							<div class="one">
-				    						<h3><a href="#">Waerebo, Nusa Tenggara</a></h3>
-				    						<p class="rate">
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star-o"></i>
-				    							<span>1000 Rating</span>
-				    						</p>
-			    						</div>
-			    						<div class="two">
-			    							<span class="price">$30</span>
-		    							</div>
-		    						</div>
-		    						<p> Desa Waerebo, yang terletak di pegunungan Flores, adalah salah
-										satu tempat paling magis di Indonesia. Dengan arsitektur
-										tradisionalnya yang unik dan budaya yang kaya</p>
-		    						<p class="days"><span>2 hari 1 malam</span></p>
-		    						<hr>
-		    						<p class="bottom-area d-flex">
-		    							<span><i class="icon-map-o"></i> Nusa Tenggara Timur</span> 
-		    							<span class="ml-auto"><a href="#">Discover</a></span>
-		    						</p>
-		    					</div>
-		    				</div>
-		    			</div>
-		    			<div class="col-md-4 ftco-animate">
-		    				<div class="destination">
-		    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/batunias.jpg);">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-    							<span class="icon-search2"></span>
-    						</div>
-		    					</a>
-		    					<div class="text p-3">
-		    						<div class="d-flex">
-		    							<div class="one">
-				    						<h3><a href="#">Hilisimaetano, Nias</a></h3>
-				    						<p class="rate">
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star-o"></i>
-				    							<span>900 Rating</span>
-				    						</p>
-			    						</div>
-			    						<div class="two">
-			    							<span class="price">$20</span>
-		    							</div>
-		    						</div>
-		    						<p>Hilisimaetano di Pulau Nias menawarkan tradisi lompat batu
-										yang unik dan rumah adat megah. Pesona budaya dan alamnya
-										sangat autentik</p>
-		    						<p class="days"><span>2 hari 1 malam</span></p>
-		    						<hr>
-		    						<p class="bottom-area d-flex">
-		    							<span><i class="icon-map-o"></i> Nias, Sumatera Utara</span> 
-		    							<span class="ml-auto"><a href="#">Discover</a></span>
-		    						</p>
-		    					</div>
-		    				</div>
-		    			</div>
-		    			<div class="col-md-4 ftco-animate">
-		    				<div class="destination">
-		    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/penglipuran.jpg);">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-    							<span class="icon-search2"></span>
-    						</div>
-		    					</a>
-		    					<div class="text p-3">
-		    						<div class="d-flex">
-		    							<div class="one">
-				    						<h3><a href="#">Desa Penglipuran, Bali</a></h3>
-				    						<p class="rate">
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star-o"></i>
-				    							<span>700 Rating</span>
-				    						</p>
-			    						</div>
-			    						<div class="two">
-			    							<span class="price">$35</span>
-		    							</div>
-		    						</div>
-		    						<p>Desa Penglipuran di Bali terkenal dengan tata ruang rapi,
-										rumah tradisional, dan keindahan bambu. Budaya leluhur terjaga
-										dengan baik</p>
-		    						<p class="days"><span>2 hari 1 malam</span></p>
-		    						<hr>
-		    						<p class="bottom-area d-flex">
-		    							<span><i class="icon-map-o"></i> Bangli, Bali</span> 
-		    							<span class="ml-auto"><a href="#">Discover</a></span>
-		    						</p>
-		    					</div>
-		    				</div>
-		    			</div>
-		    			<div class="col-md-4 ftco-animate">
-		    				<div class="destination">
-		    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/tangkahan.jpg);">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-    							<span class="icon-search2"></span>
-    						</div>
-		    					</a>
-		    					<div class="text p-3">
-		    						<div class="d-flex">
-		    							<div class="one">
-				    						<h3><a href="#">Tangkahan, Sumatera</a></h3>
-				    						<p class="rate">
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star-o"></i>
-				    							<span>650 Rating</span>
-				    						</p>
-			    						</div>
-			    						<div class="two">
-			    							<span class="price">$20</span>
-		    							</div>
-		    						</div>
-		    						<p>Tangkahan di Sumatra Utara adalah surga ekowisata dengan hutan
-										tropis, gajah liar, dan sungai jernih. Cocok untuk pencinta
-										alam sejati</p>
-		    						<p class="days"><span>2 hari 1 malam</span></p>
-		    						<hr>
-		    						<p class="bottom-area d-flex">
-		    							<span><i class="icon-map-o"></i> Langkat, Sumatera Utara</span> 
-		    							<span class="ml-auto"><a href="#">Discover</a></span>
-		    						</p>
-		    					</div>
-		    				</div>
-		    			</div>
-		    			<div class="col-md-4 ftco-animate">
-		    				<div class="destination">
-		    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/rajaampat3.jpg);">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-    							<span class="icon-search2"></span>
-    						</div>
-		    					</a>
-		    					<div class="text p-3">
-		    						<div class="d-flex">
-		    							<div class="one">
-				    						<h3><a href="#">Raja Ampat, Papua</a></h3>
-				    						<p class="rate">
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star"></i>
-				    							<i class="icon-star-o"></i>
-				    							<span>1500 Rating</span>
-				    						</p>
-			    						</div>
-			    						<div class="two">
-			    							<span class="price">$60</span>
-		    							</div>
-		    						</div>
-		    						<p>Raja Ampat di Papua Barat adalah surga bawah laut dengan
-										terumbu karang, pulau-pulau eksotis, dan keanekaragaman hayati
-										laut yang menakjubkan</p>
-		    						<p class="days"><span>2 hari 1 malam</span></p>
-		    						<hr>
-		    						<p class="bottom-area d-flex">
-		    							<span><i class="icon-map-o"></i> Raja Ampat, Papua Barat</span> 
-		    							<span class="ml-auto"><a href="#">Discover</a></span>
-		    						</p>
-		    					</div>
-		    				</div>
-		    			</div>
+          		@foreach($wisatas as $wisata) 
+				<div class="col-md-4 ftco-animate">
+					<div class="destination">
+					@php
+						$images = json_decode($wisata->images, true);
+					@endphp
+
+					<a href="{{ route('customer.show', $wisata) }}" class="img img-2 d-flex justify-content-center align-items-center" 
+						style="background-image: url({{ isset($images[0]) ? asset('storage/images/' . $images[0]) : '' }})">
+						<div class="icon d-flex justify-content-center align-items-center">
+							<span class="icon-search2"></span>
+						</div>
+					</a>
+					<div class="text p-3">
+						<div class="d-flex">
+						<div class="one">
+							<h3><a href="#">{{$wisata->name}}</a></h3>
+							<p class="rate">
+							
+							<span>⭐ {{$wisata->rating_text}}</span>
+							</p>
+						</div>
+						<div class="two">
+							<span class="price">$30</span>
+						</div>
+						</div>
+						<p>
+						{{ Str::limit(strip_tags($wisata->description), 100) }}
+						</p>
+						<hr />
+						<p class="bottom-area d-flex">
+						<span><i class="icon-map-o"></i> Nusa Tenggara Timur</span>
+						<span class="ml-auto"><a href="#">Discover</a></span>
+						</p>
+					</div>
+					</div>
+				</div>
+				@endforeach
           	</div>
           	<div class="row mt-5">
 		          <div class="col text-center">

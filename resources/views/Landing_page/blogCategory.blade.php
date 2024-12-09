@@ -3,7 +3,7 @@
 
     <div
       class="hero-wrap js-fullheight"
-      style="background-image: url('images/wae-rebo-village.jpg')"
+      style="background-image: url('{{ asset('images/abc.webp') }}');"
     >
       <div class="overlay"></div>
       <div class="container">
@@ -23,7 +23,7 @@
                         <span>Blog</span>
                         </p>
                         <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
-                            Tips &amp; Articles
+                            Biotic &amp; Articles
                         </h1>
             </div>
         </div>
@@ -35,11 +35,11 @@
             <div class="row justify-content-start mb-5 pb-3">
               <div class="col-md-7 heading-section ftco-animate">
                 <span class="subheading">Recent Blog</span>
-                <h2><strong>Tips</strong> &amp; Articles</h2>
+                <h2><strong>Biotic</strong> &amp; Articles</h2>
               </div>
             </div>
             <div class="row d-flex">
-            @foreach($blogs as $blog)
+            @foreach($artikels as $blog)
             <div class="col-md-4 d-flex ftco-animate">
               <div class="blog-entry align-self-stretch">
               <a href="{{route('showblog',$blog)}}">
