@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container p-3 cart">
+<div class="container cart" style="padding-top: 5rem;">
         <div class="row no-gutters">
          <div class="col-md-4">
         <div class="card mb-4">

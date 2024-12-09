@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Ulasan;
 use App\Models\Wisata;
+use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 

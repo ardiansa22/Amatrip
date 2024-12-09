@@ -1,10 +1,7 @@
 @extends('customer.layouts.app')
 @section('style')
 <style>
-  .profile {
-    padding-bottom:60px;
 
-  }
   .rounded-image {
     width: 100px; /* Ubah ukuran sesuai kebutuhan */
     height: 100px; /* Ubah ukuran sesuai kebutuhan */
@@ -15,7 +12,7 @@
 </style>
 @endsection
 @section('content')
-<div class="profile">
+<div class="profile" style="padding-top: 5rem;">
       <div class="row">
         <div class="col-xl-4">
 

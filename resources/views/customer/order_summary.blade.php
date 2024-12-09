@@ -15,7 +15,7 @@
     <title>Lokatiket</title>
     <link rel="stylesheet" href="../../../assets/css/summary.css">
 </head>
-<div class="container p-3 cart">
+<div class="container cart" style="padding-top: 5rem;">
         <div class="row no-gutters">
             <div class="col-md-8">
                 <div class="product-details mr-2">

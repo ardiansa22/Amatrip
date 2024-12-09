@@ -13,6 +13,8 @@ use App\Http\Controllers\UlasanController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Customer;
 use App\Exports\OrderExport;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\LandingPageController;
 use Maatwebsite\Excel\Facades\Excel;
 /*
 |--------------------------------------------------------------------------
@@ -25,15 +27,20 @@ use Maatwebsite\Excel\Facades\Excel;
 |
 */
   
-Route::get('/', function () {
-    return view('auth.login');
-});
-  
+// Route::get('/', function () {
+//     return view('Landing_page.index');
+// });
+Route::get('/', [LandingPageController::class, 'index'])->name('lp');
+Route::get('/tour', [LandingPageController::class, 'tour'])->name('tour');
+Route::get('/about', [LandingPageController::class, 'about'])->name('about');
+Route::get('/blog', [LandingPageController::class, 'blog'])->name('blog');
+Route::get('/blog/{blog}', [LandingPageController::class, 'showblog'])->name('showblog');
+
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Auth::routes(['verify' => true]);
 
-Route::middleware(['role:customer', 'verified'])->group(function () {
+Route::middleware(['role:customer', 'verified','auth'])->group(function () {
      Route::prefix('customer')->group(function(){
         Route::name('customer.')->group(function(){
         Route::get('/', [CustomerController::class, 'index'])->name('index');
@@ -95,6 +102,11 @@ Route::group(['middleware' => ['role:vendor']], function(){
             Route::delete('/vendor/{id}', [WisataController::class, 'destroy'])->name('destroy');
 
             Route::get('/filterOrders', [VendorController::class, 'filterOrders'])->name('report');
+
+            // Route untuk post artikel
+            Route::get('/artikel', [BlogController::class, 'index'])->name('artikel');
+            Route::get('/TambahArtikel', [BlogController::class, 'create'])->name('tambahartikel');
+            Route::post('/add', [BlogController::class, 'store'])->name('storeartikel');
         });
     });
 });

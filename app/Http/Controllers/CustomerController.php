@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Customer;
 use App\Models\Wisata;
 use App\Models\User;
+use App\Models\Blog;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreCustomerRequest;
 use App\Http\Requests\UpdateCustomerRequest;
@@ -21,7 +22,8 @@ class CustomerController extends Controller
     }
     public function index()
     {   $wisatas = Wisata::all();
-        return view('customer.index', compact('wisatas'));
+        $blogs = Blog::all();
+        return view('customer.index', compact('wisatas','blogs'));
        
     }
     public function search(Request $request)
@@ -32,14 +34,23 @@ class CustomerController extends Controller
     }
     public function tampilkan(Wisata $wisata)
     {
-        return view('customer.show', compact('wisata'));
+   
+        $wisatas = Wisata::where('kategori', $wisata->kategori)  // Ganti 'kategori' dengan nama kolom kategori Anda
+        ->where('id', '!=', $wisata->id)  // Pastikan blog yang sedang ditampilkan tidak muncul dalam daftar
+        ->get();
+
+
+    if (auth()->guest()) {
+        return redirect()->route('login')->with('error', 'Silakan login untuk mengakses detail wisata.');
+    }
+        return view('customer.show', compact('wisata','wisatas'));
     }
     public function explore()
     {
        $wisatas = Wisata::with('ulasans')->get();
         return view('customer.explore', compact('wisatas'));
     }
-    public function filterByCategory($kategori)
+    public function filterBykategori($kategori)
     {
         $wisatas = Wisata::where('kategori', $kategori)->get();
         return view('customer.explore', compact('wisatas'));

@@ -128,6 +128,23 @@
           </li>
           </ul>
       </li><!-- End Forms Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Artikel</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{{route('vendor.artikel')}}">
+              <i class="bi bi-circle"></i><span>Artikel Saya</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{route('vendor.tambahartikel')}}">
+              <i class="bi bi-circle"></i><span>Tambah Artikel</span>
+            </a>
+          </li>
+          </ul>
+      </li><!-- End Forms Nav -->
     </ul>
 
   </aside><!-- End Sidebar-->
@@ -160,6 +177,12 @@
   <script src="../assets/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/admin/vendor/chart.js/chart.umd.js"></script>
   <script src="../assets/admin/vendor/echarts/echarts.min.js"></script>
+  <!-- Quill CSS -->
+  <link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet">
+  <!-- Quill JS -->
+  <script src="https://cdn.quilljs.com/1.3.7/quill.min.js"></script>
+
+
   <script src="../assets/admin/vendor/quill/quill.min.js"></script>
   <script src="../assets/admin/vendor/simple-datatables/simple-datatables.js"></script>
   <script src="../assets/admin/vendor/tinymce/tinymce.min.js"></script>
@@ -168,6 +191,7 @@
 
   <!-- Template Main JS File -->
   <script src="../assets/admin/js/main.js"></script>
+  
   
 
 </body>

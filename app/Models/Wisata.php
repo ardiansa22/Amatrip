@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Wisata extends Model
 {
@@ -41,5 +42,9 @@ class Wisata extends Model
             return 'Belum ada Ulasan';
         }
         return number_format($averageRating, 1);
+    }
+    public function blogs()
+    {
+        return $this->hasMany(Blog::class);
     }
 }

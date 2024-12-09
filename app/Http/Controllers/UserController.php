@@ -29,15 +29,15 @@ class UserController extends Controller
         $totalOrder =  Order::where('status', 'paid')->count();
         $totalOrderPaid =  Order::where('status', 'paid')->sum('total_price');
         $totalWisata = Wisata::count();
-        $vendorCount = User::role('vendor')->count();
-        $customerCount = User::role('customer')->count();
+        // $vendorCount = User::role('vendor')->count();
+        // $customerCount = User::role('customer')->count();
         $adminCount = User::role('superadmin')->count();
 
         // informasi daftar wisata 
         $wisata = Wisata::all();
         // informasi transaksi
         $order = Order::all();
-        return view('superadmin.users.index',compact('data','totalUsers', 'vendorCount','customerCount','adminCount','totalWisata','totalOrder','totalOrderPaid','wisata','order'))
+        return view('superadmin.users.index',compact('data','totalUsers', 'adminCount','totalWisata','totalOrder','totalOrderPaid','wisata','order'))
             ->with('i', ($request->input('page', 1) - 1) * 5);
     }
    

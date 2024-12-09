@@ -47,12 +47,7 @@
                             <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                                 <i class="bi bi-person"></i>
                             </div>
-                            <div class="ps-3">
-                                <h6>{{ $totalUsers }}</h6>
-                                <span class="text-success small pt-1 fw-bold">{{ $vendorCount }}</span> <span class="text-muted small pt-2 ps-1">Pengelola,</span>
-                                <span class="text-success small pt-1 fw-bold">{{ $customerCount }}</span> <span class="text-muted small pt-2 ps-1">Customer,</span>
-                                <span class="text-success small pt-1 fw-bold">{{ $adminCount }}</span> <span class="text-muted small pt-2 ps-1">Superadmin</span>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>

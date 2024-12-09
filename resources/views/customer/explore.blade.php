@@ -7,32 +7,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <link rel="stylesheet" href="../../../assets/css/card.css">
 </head>
 <body>
-    
-
-
-<div class="container">
-    <nav id="navbar2" class="navbar navbar-expand" style="background-color: white;">
-        <ul class="navbar-nav nav-justified w-100">
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('customer.wisata.filter', 'Alam') }}">Alam</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('customer.wisata.filter', 'Pantai') }}">Pantai</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('customer.wisata.filter', 'Kawah') }}">Kawah</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('customer.wisata.filter', 'Gunung') }}">Gunung</a>
-            </li>
-        </ul>
-    </nav>
-</div>
-<div class="container py-2">
+<div class="container" style="padding-top: 5rem;">
     <div class="row mb-5">
         @foreach($wisatas as $wisata)
         <div class="col-md-4">
@@ -47,7 +24,7 @@
                                 {{$wisata->rating_text}}
                             </span>
                         </div>
-                        <a href="{{ route('customer.show', $wisata) }}" class="btn" style="background-color: #0046BF;">View Detail</a>
+                        <a href="{{ route('customer.show', $wisata) }}" class="btn" style="background-color: green;">Discover</a>
                     </div>
                 </div>
             </div>

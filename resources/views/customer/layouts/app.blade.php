@@ -76,6 +76,9 @@ if ('serviceWorker' in navigator) {
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 <link href="../../../assets/admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="../../../assets/admin/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../assets/admin/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
