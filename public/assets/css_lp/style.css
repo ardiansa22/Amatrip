@@ -12179,3 +12179,84 @@ textarea.form-control {
   .block-3 { grid-area: 4 / 1 / 5 / 2; }
   
 }
+/* Mengatur gaya untuk kontainer hasil pencarian */
+#search-results {
+  margin-top: 10px;  /* Mengurangi margin atas */
+  padding: 5px;      /* Mengurangi padding */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 100%;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya item pencarian individual */
+.search-item {
+  padding: 10px;     /* Mengurangi padding item */
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+  font-size: 14px;    /* Mengurangi ukuran font */
+}
+
+.search-item:last-child {
+  border-bottom: none;
+}
+
+/* Efek hover pada setiap item pencarian */
+.search-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Gaya untuk judul artikel */
+.search-item h5 {
+  font-size: 16px;  /* Mengurangi ukuran font judul */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;  /* Mengurangi margin bawah */
+  transition: color 0.3s ease;
+}
+
+.search-item h5:hover {
+  color: var(--green); /* Ubah warna judul saat hover */
+  text-decoration: underline;
+}
+
+/* Gaya untuk potongan konten */
+.search-item p {
+  font-size: 12px;  /* Mengurangi ukuran font deskripsi */
+  color: #555;
+  line-height: 1.5;  /* Menambah jarak antar baris */
+  margin-bottom: 8px; /* Mengurangi margin bawah */
+}
+
+/* Gaya untuk elemen yang menunjukkan tidak ada hasil pencarian */
+#search-results p {
+  color: #888;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  #search-results {
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  .search-item {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .search-item h5 {
+    font-size: 14px;
+  }
+
+  .search-item p {
+    font-size: 11px;
+  }
+}
+#search-results {
+  max-width: 600px;  /* Membatasi lebar maksimum */
+  margin: 0 auto;    /* Menjaga kontainer tetap di tengah */
+}
