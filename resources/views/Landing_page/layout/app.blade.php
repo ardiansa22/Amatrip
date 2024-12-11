@@ -2,6 +2,22 @@
 <html lang="en">
   <head>
     <title>AmaTrip - Edu Platorm</title>
+    @laravelPWA
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="{{route('laravelpwa.manifest')}}">
+    <!-- Chrome for Android theme color -->
+    <meta name="theme-color" content="#000000">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="PWA">
+    <link rel="icon" sizes="512x512" href="/images/icons/icon-512x512.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="PWA">
+    <link rel="apple-touch-icon" href="/images/icons/icon-512x512.png">
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -34,6 +50,24 @@
     <link rel="stylesheet" href="../assets/css_lp/flaticon.css" />
     <link rel="stylesheet" href="../assets/css_lp/icomoon.css" />
     <link rel="stylesheet" href="../assets/css_lp/style.css" />
+        <!-- Tile for Win8 -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/icons/icon-512x512.png">
+
+    <script type="text/javascript">
+        // Initialize the service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/serviceworker.js', {
+                scope: '.'
+            }).then(function (registration) {
+                // Registration was successful
+                console.log('Laravel PWA: ServiceWorker registration successful with scope: ', registration.scope);
+            }, function (err) {
+                // registration failed :(
+                console.log('Laravel PWA: ServiceWorker registration failed: ', err);
+            });
+        }
+    </script>
     @yield('style')
   </head>
   <body>
@@ -112,14 +146,7 @@
               <ul class="list-unstyled">
                 <li><a href="#" class="py-2 d-block">About</a></li>
                 <li><a href="#" class="py-2 d-block">Service</a></li>
-                <li>
-                  <a href="#" class="py-2 d-block">Terms and Conditions</a>
-                </li>
                 <li><a href="#" class="py-2 d-block">Become a partner</a></li>
-                <li>
-                  <a href="#" class="py-2 d-block">Best Price Guarantee</a>
-                </li>
-                <li><a href="#" class="py-2 d-block">Privacy and Policy</a></li>
               </ul>
             </div>
           </div>
@@ -130,8 +157,6 @@
                 <li><a href="#" class="py-2 d-block">FAQ</a></li>
                 <li><a href="#" class="py-2 d-block">Payment Option</a></li>
                 <li><a href="#" class="py-2 d-block">Booking Tips</a></li>
-                <li><a href="#" class="py-2 d-block">How it works</a></li>
-                <li><a href="#" class="py-2 d-block">Contact Us</a></li>
               </ul>
             </div>
           </div>
@@ -140,19 +165,6 @@
               <h2 class="ftco-heading-2">Have a Questions?</h2>
               <div class="block-23 mb-3">
                 <ul>
-                  <li>
-                    <span class="icon icon-map-marker"></span
-                    ><span class="text"
-                      >203 Fake St. Mountain View, San Francisco, California,
-                      USA</span
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><span class="icon icon-phone"></span
-                      ><span class="text">+2 392 3929 210</span></a
-                    >
-                  </li>
                   <li>
                     <a href="#"
                       ><span class="icon icon-envelope"></span
@@ -172,8 +184,7 @@
               <script>
                 document.write(new Date().getFullYear());
               </script>
-              All rights reserved | This template is made with
-              <i class="icon-heart" aria-hidden="true"></i> by
+              All rights reserved | This template is made by
               <a href="https://colorlib.com" target="_blank">Colorlib</a>
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
@@ -206,7 +217,7 @@
         />
       </svg>
     </div>
-
+    @yield('script')
     <script src="../assets/js_lp/jquery.min.js"></script>
     <script src="../assets/js_lp/jquery-migrate-3.0.1.min.js"></script>
     <script src="../assets/js_lp/popper.min.js"></script>

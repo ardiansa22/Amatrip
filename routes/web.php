@@ -36,6 +36,11 @@ Route::get('/about', [LandingPageController::class, 'about'])->name('about');
 Route::get('/blog', [LandingPageController::class, 'blog'])->name('blog');
 Route::get('/blog/{blog}', [LandingPageController::class, 'showblog'])->name('showblog');
 Route::get('/Category/{category}', [LandingPageController::class, 'showByCategory'])->name('kategori');
+Route::get('/tags/{tag}', [LandingPageController::class, 'filterByTag'])->name('tags');
+Route::get('/search', [LandingPageController::class, 'search'])->name('search');
+Route::get('/search/ajax', [LandingPageController::class, 'liveSearch'])->name('search.ajax');
+
+
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 

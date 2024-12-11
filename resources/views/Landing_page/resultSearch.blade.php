@@ -34,11 +34,11 @@
           <div class="container">
             <div class="row justify-content-start mb-5 pb-3">
               <div class="col-md-7 heading-section ftco-animate">
-                <h2><strong>{{$category}}</strong> &amp; Articles</h2>
+                <h5>Contains the word : <strong><p>{{$query}}</p></strong></h5>
               </div>
             </div>
             <div class="row d-flex">
-            @foreach($artikels as $blog)
+            @foreach($articles as $blog)
             <div class="col-md-4 d-flex ftco-animate">
               <div class="blog-entry align-self-stretch">
               <a href="{{route('showblog',$blog)}}">

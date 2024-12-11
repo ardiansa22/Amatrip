@@ -79,7 +79,7 @@ class LandingPageController extends Controller
         return view('Landing_page.showblog', compact('blog', 'blogs', 'wisata'));
     }
 
-    public function topTags()
+   public function topTags()
     {
         // Ambil semua tags dari tabel blogs
         $allTags = DB::table('blogs')
@@ -99,12 +99,24 @@ class LandingPageController extends Controller
         // Urutkan berdasarkan frekuensi kemunculan (desc)
         arsort($tagCounts);
 
-        // Ambil 5 tag teratas
+        // Ambil 5 tag teratas sebagai array
         $topTags = array_slice($tagCounts, 0, 5, true);
 
         // Kirim data ke view
         return view('Landing_page.index', compact('topTags'));
     }
+
+        public function filterByTag($tag)
+    {
+        // Ambil artikel yang memiliki tag tertentu
+        $articles = DB::table('blogs')
+            ->where('tags', 'LIKE', '%' . $tag . '%')
+            ->get();
+
+        // Kirim data artikel ke view
+        return view('Landing_page.tags', compact('articles', 'tag'));
+    }
+
 
     public function showByCategory($category)
     {
@@ -118,6 +130,33 @@ class LandingPageController extends Controller
 
         return view('Landing_page.blogCategory', compact('artikels', 'category'));
     }
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+        $articles = Blog::where('content', 'like', '%' . $query . '%')->get();
+        return view('Landing_page.resultSearch', compact('articles', 'query'));
+    }
+    public function liveSearch(Request $request)
+{
+    $query = $request->input('query');
+    $articles = Blog::where('content', 'like', '%' . $query . '%')->get();
+
+    // Mengembalikan hasil pencarian dalam bentuk HTML
+    $output = '';
+    if (count($articles) > 0) {
+        foreach ($articles as $article) {
+            $output .= '<div class="search-item">';
+            $output .= '<h5>' . $article->title . '</h5>';
+            $output .= '</div>';
+        }
+    } else {
+        $output .= '<p>No results found</p>';
+    }
+
+    return response()->json(['html' => $output]);
+}
+
+
     /**
      * Show the form for creating a new resource.
      *

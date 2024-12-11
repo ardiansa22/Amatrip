@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="/assets/images/logo.png">
-  <title>Lokatiket</title>
+  <title>AmaTrip</title>
   @laravelPWA
     <!-- Web Application Manifest -->
 <link rel="manifest" href="{{route('laravelpwa.manifest')}}">
@@ -119,7 +119,7 @@
             <div class="col-12 d-flex flex-column mx-auto">
               <div class="card login-card">
                 <div class="card-body">
-                  <img src="/assets/images/logolk.png" alt="Illustration">
+                  <!-- <img src="/assets/images/logolk.png" alt="Illustration"> -->
                   <p class="text-muted text-center font-weight-bolder">Silahkan Daftar</p>
                   <form role="form" method="POST" action="{{ route('register') }}">
                     @csrf
@@ -158,7 +158,7 @@
                   </label>
                 </div>
                 <div class="text-center">
-                  <button type="submit" class="btn w-100 my-4 mb-2" style="background-color:#0046BF;color:white;">Daftar</button>
+                  <button type="submit" class="btn w-100 my-4 mb-2" style="background-color:#8BC34A;color:white;">Daftar</button>
                 </div>
                 <p class="text-sm mt-3 mb-0">Sudah punya akun? <a href="{{ route('login') }}" class="text-dark font-weight-bolder">Masuk</a></p>
               </form>

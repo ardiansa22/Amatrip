@@ -272,70 +272,52 @@
     </section>
 
     <section class="pb-5">
-      <div class="container-lg">
-
-        <div class="row">
-          <div class="col-md-12">
-
-            <div class="section-header d-flex flex-wrap justify-content-between my-4">
-
-              <h2 class="section-title">Best EcoTourism Destination</h2>
-
-              <div class="d-flex align-items-center">
-                <a href="#" class="btn btn-primary rounded-1">View All</a>
-              </div>
-            </div>
-
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-header d-flex flex-wrap justify-content-between my-4">
+          <h2 class="section-title">Best EcoTourism Destination</h2>
+          <div class="d-flex align-items-center">
+            <a href="#" class="btn btn-primary rounded-1">View All</a>
           </div>
         </div>
-
-        <div class="row">
-          <div class="col-md-12">
-
-            <div class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5">
-            @foreach($wisatas as $wisata)
-              <div class="col">
-                <div class="product-item">
-                  <figure>
-                    <a href="{{ route('customer.show', $wisata) }}" title="Product Title">
-                      <img src="{{ asset('storage/images/' . json_decode($wisata->images)[0]) }}" alt="Product Thumbnail" class="tab-image">
-                    </a>
-                  </figure>
-                  <div class="d-flex flex-column text-center">
-                    <h3 class="fs-6 fw-normal">{{$wisata->name}}</h3>
-                    <div>
-                      <!-- <span class="rating">
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use xlink:href="#star-half"></use></svg>
-                      </span> -->
-                      <span>⭐ {{$wisata->rating_text}}</span>
-                    </div>
-                    <!-- <div class="d-flex justify-content-center align-items-center gap-2">
-                      <del>$24.00</del>
-                      <span class="text-dark fw-semibold">$18.00</span>
-                      <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">10% OFF</span>
-                    </div> -->
-                    <div class="button-area p-3 pt-0">
-                        <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
-                          <a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart">
-                            <svg width="18" height="18"><use xlink:href="#cart"></use></svg> Lihat Detail</a></div>
-                      </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-12">
+        <div class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+          @foreach($wisatas as $wisata)
+            <div class="col mb-4">
+              <div class="product-item">
+                <figure>
+                  <a href="{{ route('customer.show', $wisata) }}" title="Product Title">
+                    <img src="{{ asset('storage/images/' . json_decode($wisata->images)[0]) }}" alt="Product Thumbnail" class="tab-image">
+                  </a>
+                </figure>
+                <div class="d-flex flex-column text-center">
+                  <h3 class="fs-6 fw-normal">{{$wisata->name}}</h3>
+                  <div>
+                    <span>⭐ {{$wisata->rating_text}}</span>
+                  </div>
+                  <div class="button-area p-3 pt-0">
+                    <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
+                      <a href="{{ route('customer.show', $wisata) }}" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart">
+                        <svg width="18" height="18"><use xlink:href="#cart"></use></svg> Lihat Detail
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
-              @endforeach
             </div>
-            <!-- / product-grid -->
-
-
-          </div>
+          @endforeach
         </div>
+        <!-- / product-grid -->
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
 
     <section class="py-3">
       <div class="container-lg">

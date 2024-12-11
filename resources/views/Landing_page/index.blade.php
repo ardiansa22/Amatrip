@@ -25,23 +25,23 @@
               preserving our planet
             </p>
             <div class="block-17 my-4">
-              <form action="" method="post" class="d-block d-flex">
+              <form action="{{ route('search') }}" method="get" class="d-block d-flex">
+                @csrf
                 <div class="fields d-block d-flex">
                   <div class="textfield-search one-third">
                     <input
                       type="text"
+                      id="search-input"
+                      name="query"
                       class="form-control"
-                      placeholder="Ex: food, service, hotel"
+                      placeholder="Find your Article ......"
                     />
                   </div>
-                  
                 </div>
-                <input
-                  type="submit"
-                  class="search-submit btn btn-primary"
-                  value="Search"
-                />
               </form>
+            </div>
+            <div id="search-results">
+              <!-- Hasil pencarian akan ditampilkan di sini -->
             </div>
             <div class=" my-4">
             <p>Or browse the highlights</p>
@@ -68,7 +68,7 @@
                         <div class="tagcloud">
                         <p>Most frequently appearing tags in articles</p>
                         @foreach($topTags as $tag => $count)
-                            <a href="#" class="tag-cloud-link" style="color: white;">{{ $tag }}</a>
+                            <a href="{{route('tags',$tag)}}" class="tag-cloud-link" style="color: white;">{{ $tag }}</a>
                             @endforeach
                         </div>
                     </div>
@@ -388,8 +388,6 @@
             </a>
             <div class="text p-4 d-block">
               <span class="tag">{{$blog->published_date}}</span>
-              <span class="tag">,</span>
-              <span class="tag">{{$blog->tags}}</span>
               <h3 class="heading mt-3">
                 <a href="{{route('showblog',$blog)}}">{{$blog->title}}</a>
               </h3>
@@ -460,7 +458,7 @@
     <section class="ftco-section testimony-section bg-light">
       <div class="container">
         <div class="row justify-content-start">
-          <div class="col-md-5 heading-section ftco-animate">
+          <div class="col-md-12 heading-section ftco-animate">
             <span class="subheading">Best EcoTourism Website</span>
             <h2 class="mb-4 pb-3"><strong>Why</strong> Choose Us?</h2>
             <p>
@@ -476,93 +474,42 @@
 
             <p>
               <a
-                href="#"
+                href="{{route('about')}}"
                 class="btn btn-primary btn-outline-primary mt-4 px-4 py-3"
                 >Read more</a
               >
             </p>
           </div>
-          <div class="col-md-1"></div>
-          <div class="col-md-6 heading-section ftco-animate">
-            <span class="subheading">Testimony</span>
-            <h2 class="mb-4 pb-3"><strong>Our</strong> Guests Says</h2>
-            <div class="row ftco-animate">
-              <div class="col-md-12">
-                <div class="carousel-testimony owl-carousel">
-                  <div class="item">
-                    <div class="testimony-wrap d-flex">
-                      <div
-                        class="user-img mb-5"
-                        style="background-image: url(images/person_1.jpg)"
-                      >
-                        <span
-                          class="quote d-flex align-items-center justify-content-center"
-                        >
-                          <i class="icon-quote-left"></i>
-                        </span>
-                      </div>
-                      <div class="text ml-md-4">
-                        <p class="mb-5">
-                          Far far away, behind the word mountains, far from the
-                          countries Vokalia and Consonantia, there live the
-                          blind texts.
-                        </p>
-                        <p class="name">Dennis Green</p>
-                        <span class="position">Guest from italy</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="testimony-wrap d-flex">
-                      <div
-                        class="user-img mb-5"
-                        style="background-image: url(images/person_2.jpg)"
-                      >
-                        <span
-                          class="quote d-flex align-items-center justify-content-center"
-                        >
-                          <i class="icon-quote-left"></i>
-                        </span>
-                      </div>
-                      <div class="text ml-md-4">
-                        <p class="mb-5">
-                          Far far away, behind the word mountains, far from the
-                          countries Vokalia and Consonantia, there live the
-                          blind texts.
-                        </p>
-                        <p class="name">Dennis Green</p>
-                        <span class="position">Guest from London</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="testimony-wrap d-flex">
-                      <div
-                        class="user-img mb-5"
-                        style="background-image: url(images/person_3.jpg)"
-                      >
-                        <span
-                          class="quote d-flex align-items-center justify-content-center"
-                        >
-                          <i class="icon-quote-left"></i>
-                        </span>
-                      </div>
-                      <div class="text ml-md-4">
-                        <p class="mb-5">
-                          Far far away, behind the word mountains, far from the
-                          countries Vokalia and Consonantia, there live the
-                          blind texts.
-                        </p>
-                        <p class="name">Dennis Green</p>
-                        <span class="position">Guest from Philippines</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
+@endsection
+@section('script')
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  let typingTimer;
+let doneTypingInterval = 500; // waktu tunggu setelah berhenti mengetik (dalam milidetik)
+
+$('#search-input').on('input', function() {
+  clearTimeout(typingTimer);
+  let query = $(this).val();
+  
+  if (query.length > 2) {
+    typingTimer = setTimeout(function() {
+      $.ajax({
+        url: '{{ route('search.ajax') }}',
+        type: 'GET',
+        data: { query: query },
+        success: function(data) {
+          $('#search-results').html(data.html);
+        }
+      });
+    }, doneTypingInterval);
+  } else {
+    $('#search-results').html('');
+  }
+});
+
+</script>
+
 @endsection
