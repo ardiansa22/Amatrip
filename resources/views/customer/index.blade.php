@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Amatrip - Grocery Store HTML Website Template</title>
+    <title>Amatrip - EcoTourism Platform</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -174,7 +174,7 @@
             <div class="card border-0 bg-primary rounded-0 p-4 text-light">
               <div class="row">
                 <div class="col-md-3 text-center">
-                  <svg width="60" height="60"><use xlink:href="#fresh"></use></svg>
+                    <img src="images\ecofriendly.png" alt="Eco-friendly Travel" width="60" height="60"></use></svg>
                 </div>
                 <div class="col-md-9">
                   <div class="card-body p-0">
@@ -189,7 +189,7 @@
             <div class="card border-0 bg-secondary rounded-0 p-4 text-light">
               <div class="row">
                 <div class="col-md-3 text-center">
-                  <svg width="60" height="60"><use xlink:href="#organic"></use></svg>
+                    <img src="images/komunitas.png" alt="Eco-friendly Travel" width="60" height="60"></use></svg>
                 </div>
                 <div class="col-md-9">
                   <div class="card-body p-0">
@@ -204,7 +204,7 @@
             <div class="card border-0 bg-danger rounded-0 p-4 text-light">
               <div class="row">
                 <div class="col-md-3 text-center">
-                  <svg width="60" height="60"><use xlink:href="#delivery"></use></svg>
+                    <img src="images/transport.png" alt="Eco-friendly Travel" width="60" height="60"></use></svg>
                 </div>
                 <div class="col-md-9">
                   <div class="card-body p-0">
@@ -248,19 +248,19 @@
                   <h4 class="fs-6 mt-3 fw-normal category-title">Alam</h4>
                 </a>
                 <a href="{{ route('customer.wisata.filter', 'Pantai') }}" class="nav-link swiper-slide text-center">
-                  <img src="images/category-thumb-2.jpg" style="border-radius: 20px;" alt="Category Thumbnail">
+                  <img src="images/categorywakatobi2.jpg" style="border-radius: 20px;" alt="Category Thumbnail">
                   <h4 class="fs-6 mt-3 fw-normal category-title">Pantai</h4>
                 </a>
                 <a href="{{ route('customer.wisata.filter', 'Gunung') }}" class="nav-link swiper-slide text-center">
-                  <img src="images/category-thumb-3.jpg" style="border-radius: 20px;" alt="Category Thumbnail">
+                  <img src="images/categorybromo.jpg" style="border-radius: 20px;" alt="Category Thumbnail">
                   <h4 class="fs-6 mt-3 fw-normal category-title">Gunung</h4>
                 </a>
                 <a href="{{ route('customer.wisata.filter', 'Kawah') }}" class="nav-link swiper-slide text-center">
-                  <img src="images/category-thumb-4.jpg" style="border-radius: 20px;" alt="Category Thumbnail">
+                  <img src="images/categorykawah.jpg" style="border-radius: 20px;" alt="Category Thumbnail">
                   <h4 class="fs-6 mt-3 fw-normal category-title">Kawah</h4>
                 </a>
                 <a href="{{route('customer.explore')}}" class="nav-link swiper-slide text-center">
-                  <img src="images/category-thumb-5.jpg" style="border-radius: 20px;" alt="Category Thumbnail">
+                  <img src="images/categoryHilisimaetano3.jpg" style="border-radius: 20px;" alt="Category Thumbnail">
                   <h4 class="fs-6 mt-3 fw-normal category-title">Semua</h4>
                 </a>
               </div>
@@ -279,7 +279,7 @@
 
             <div class="section-header d-flex flex-wrap justify-content-between my-4">
 
-              <h2 class="section-title">Best selling products</h2>
+              <h2 class="section-title">Best EcoTourism Destination</h2>
 
               <div class="d-flex align-items-center">
                 <a href="#" class="btn btn-primary rounded-1">View All</a>
@@ -319,10 +319,9 @@
                       <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">10% OFF</span>
                     </div> -->
                     <div class="button-area p-3 pt-0">
-                      <div class="row g-1 mt-2">
-                        <div class="col-3"><input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1"></div>
-                        <div class="col-7"><a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart"><svg width="18" height="18"><use xlink:href="#cart"></use></svg> Lihat Detail</a></div>
-                        <div class="col-2"><a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6"><svg width="18" height="18"><use xlink:href="#heart"></use></svg></a></div>
+                        <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
+                          <a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart">
+                            <svg width="18" height="18"><use xlink:href="#cart"></use></svg> Lihat Detail</a></div>
                       </div>
                     </div>
                   </div>
@@ -456,18 +455,6 @@
 
       </div>
     </section> -->
-    <div id="footer-bottom">
-      <div class="container-lg">
-        <div class="row">
-          <div class="col-md-6 copyright">
-            <p>© 2024 Organic. All rights reserved.</p>
-          </div>
-          <div class="col-md-6 credit-link text-start text-md-end">
-            <p>HTML Template by <a href="https://templatesjungle.com/">TemplatesJungle</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a> </p>
-          </div>
-        </div>
-      </div>
-    </div>
     <script src="assets/js/jquery-1.11.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
