@@ -21,38 +21,35 @@ Amatripm.y.id adalah sebuah platform marketplace berbasis web yang menyediakan l
 ```bash
 git clone https://github.com/ardiansa22/Amatrip.git
 cd Amatrip
+```
+
 2. Instalasi Dependensi
 Instal semua dependensi menggunakan package manager yang sesuai:
 
-bash
-Salin
-Edit
+```bash
 npm install
+```
+
 3. Konfigurasi Lingkungan
 Buat file .env di root project dan tambahkan konfigurasi berikut:
 
-dotenv
-Salin
-Edit
+.env
+
+```
 DB_HOST=<hostname>
 DB_USER=<username>
 DB_PASS=<password>
 CLOUD_STORAGE_KEY=<key>
 API_BASE_URL=<base_url>
+```
+
 4. Menjalankan Server
 Jalankan aplikasi:
 
-bash
-Salin
-Edit
+```
 npm run start
-📋 API Dokumentasi
-Endpoint utama untuk layanan:
+```
 
-GET /api/tourist-destinations: Mendapatkan daftar destinasi wisata.
-POST /api/bookings: Melakukan pemesanan layanan wisata.
-GET /api/bookings/:id: Mendapatkan detail pemesanan berdasarkan ID.
-Dokumentasi API lebih lengkap dapat ditemukan di repository ini.
 
 🖼️ Screenshot
 ![image](https://github.com/user-attachments/assets/04b27975-57ca-411c-a461-92b758c1b534)
